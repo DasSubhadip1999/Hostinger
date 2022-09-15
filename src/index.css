@@ -82,11 +82,44 @@ nav {
 }
 .item-detail {
   position: absolute;
-  
-  width: 10rem;
-  height: 5rem;
+  left: -170px;
+  bottom: -280px;
+  width: 370px;
   background-color: white;
   border-radius: 3px;
+  padding: 18px;
+}
+.item-detail::after {
+  content: "";
+  position: absolute;
+  top : -10px;
+  left: 48%;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  rotate: 45deg;
+}
+.item-list {
+  color: black;
+  /* border: 1px solid red; */
+  display: flex;
+  margin: 8px 0;
+  align-items: center;
+  transition: 0.3s;
+}
+.item-list:hover {
+  scale: 1.04;
+}
+.item-list > img {
+  margin: 8px;
+}
+.item-list h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.item-list p {
+  font-size: 14px;
 }
 /*menu bar ends*/
 
