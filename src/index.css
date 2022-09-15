@@ -63,6 +63,10 @@ nav {
   justify-content: space-between;
 }
 /*menu bar starts*/
+/* toggle menu in responsive  */
+.toggle-menu {
+  display: none;
+}
 .menubar {
   /* border: 1px solid skyblue; */
   display: flex;
@@ -79,6 +83,10 @@ nav {
 }
 .menu-item > i {
   margin: 0 0.5rem;
+  transition: 0.3s;
+}
+.fa-angle-down.rotate {
+  rotate: 180deg;
 }
 .item-detail {
   position: absolute;

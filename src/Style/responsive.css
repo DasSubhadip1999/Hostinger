@@ -1,0 +1,34 @@
+@media screen and (max-width : 400px) {
+
+    header {
+        height : 78vh;
+    }
+    nav {
+        border: 1px solid white;
+        padding: 0.8rem 0.9rem;
+    }
+    .logo-lan-group h1::first-letter {
+        font-size: 14px;
+    }
+    .logo-lan-group h1 {
+        font-size: 11px;
+    }
+    .logo-lan-group img {
+        width: 25px;
+        height: 15px;
+    }
+    .logo-lan-group img+p {
+        display: none;
+    }
+    .menubar-container {
+        display: none;
+    }
+    .toggle-menu {
+        display: flex;
+        align-items: center;
+    }
+    .toggle-menu i {
+        margin: 0 0.6rem;
+        font-size: 18px;
+    }
+}

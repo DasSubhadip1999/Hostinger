@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MenuItem from './MenuItem';
 import menuItemData from '../Data/menuItemData';
+import ToggleMenu from './Responsive components/ToggleMenu';
 
 function Header() {
 
@@ -47,6 +48,7 @@ function Header() {
                 </div>
 
             </div>
+            <ToggleMenu />
         </nav>
     </header>
   )

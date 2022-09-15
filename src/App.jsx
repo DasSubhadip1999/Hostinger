@@ -1,4 +1,6 @@
 import Header from "./Components/Header"
+import {ResponsiveProvider} from "./Context/ResponsiveContext";
+
 
 function App() {
   return (

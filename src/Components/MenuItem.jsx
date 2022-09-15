@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { v4 as uuidv4} from "react";
 import {AnimatePresence, motion} from "framer-motion"
 import MenuItemList from './MenuItemList'
 
@@ -10,11 +11,11 @@ function MenuItem({data}) {
     <AnimatePresence>
     <div onClick={setDrop}  className='menu-item'>
         {data.title}
-        <i className="fa-solid fa-angle-down"></i>
+        <i className={ isDrop ? "fa-solid fa-angle-down rotate" : "fa-solid fa-angle-down"}></i>
         {
           isDrop && (
             <motion.div
-              key={data.id}
+              key={uuidv4()}
               initial = { {opacity : 0} }
               animate = { { opacity : 1} }
               exit = { { opacity : 0} }
@@ -22,7 +23,7 @@ function MenuItem({data}) {
               <div className='item-detail'>
                 {
                   data.detail.map( (item) => {
-                    return <MenuItemList data={item} />
+                    return <MenuItemList key={uuidv4()} data={item} />
                   })
                 }
 
