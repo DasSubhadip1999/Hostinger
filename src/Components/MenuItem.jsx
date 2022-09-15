@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import { v4 as uuidv4} from "react";
+import { v4 as uuidv4} from "uuid";
 import {AnimatePresence, motion} from "framer-motion"
 import MenuItemList from './MenuItemList'
 
 function MenuItem({data}) {
   const [isDrop, setIsDrop] = useState(false)
   const setDrop = () => {setIsDrop( prev => !prev)}
-
   return (
     <AnimatePresence>
     <div onClick={setDrop}  className='menu-item'>

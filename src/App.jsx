@@ -4,9 +4,11 @@ import {ResponsiveProvider} from "./Context/ResponsiveContext";
 
 function App() {
   return (
-    <div className="container">
-        <Header />
-    </div>
+    <ResponsiveProvider>
+      <div className="container">
+          <Header />
+      </div>
+    </ResponsiveProvider>
   )
 }
 

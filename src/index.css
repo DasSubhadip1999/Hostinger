@@ -19,6 +19,7 @@ header {
   width: 100%;
   height: 83vh;
   color: white;
+  position: relative;
 }
 nav {
   /* border: 1px solid white; */

@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import ResponsiveContext from '../Context/ResponsiveContext';
 import MenuItem from './MenuItem';
 import menuItemData from '../Data/menuItemData';
 import ToggleMenu from './Responsive components/ToggleMenu';
+import ToggleMenuItem from './Responsive components/ToggleMenuItem';
 
 function Header() {
 
@@ -18,10 +20,13 @@ function Header() {
         getFlag();
     }, [])
 
+    //for responsive
+    const {showMenu} = useContext(ResponsiveContext)
+
 
   return (
-    <header>
-        <nav>
+    <header className={showMenu ? "toggleActive" : null}>
+        <nav className={showMenu ? "toggleActive" : null}>
             <div className='logo-lan-group'>
                 <h1>Hostinger</h1>
                 <div>
@@ -46,10 +51,12 @@ function Header() {
                     </div>
 
                 </div>
-
             </div>
             <ToggleMenu />
         </nav>
+        {
+            showMenu && <ToggleMenuItem />
+        }          
     </header>
   )
 }
