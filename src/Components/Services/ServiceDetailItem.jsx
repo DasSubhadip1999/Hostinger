@@ -1,11 +1,12 @@
 import React from 'react'
 
-function ServiceDetailItem() {
+function ServiceDetailItem({data}) {
   return (
-    <div>
+    <div className='service-detail-item'>
         <i className="fa-solid fa-check"></i>
-        <p>Unmetered</p>traffic (Unlimited GB)
-        <i class="fa-regular fa-circle-question"></i>
+        <p>{data.bold}</p>
+        <p>{data.normal}</p>
+        <i className="fa-regular fa-circle-question"></i>
     </div>
   )
 }

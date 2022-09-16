@@ -20,9 +20,6 @@ function Campaign() {
         let minutes = Math.floor( (diff % (1000 * 60 * 60)) / (1000 * 60));
         let seconds = Math.floor( (diff % (1000 * 60)) / 1000);
 
-        
-
-
         if ( diff < 0) {
           clearInterval(interval.current)
         }else{
@@ -31,7 +28,6 @@ function Campaign() {
           setTimerMinutes(("0" + minutes).slice(-2));
           setTimerSeconds(("0" + seconds).slice(-2));
         }
-
       })
     }
 

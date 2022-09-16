@@ -8,6 +8,13 @@ function Button({appearance, text}) {
             width : '15rem',
             height : '3rem'
         }
+    }else if ( appearance === "secondaryblue") {
+      newStyle = {
+        backgroundColor : "#491bd5",
+        width : '16rem',
+        height : '2.9rem',
+        margin : "1rem auto"
+      }
     }
   return (
     <button className='btn'

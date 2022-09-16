@@ -47,3 +47,123 @@
     font-weight: 500;
     color: rgba(0,0,0,0.7);
 }
+
+/*hosting services*/
+.hosting-services {
+    width: 75%;
+    margin: 2.7rem auto;
+}
+.hosting-services > h3 {
+    text-align: center;
+    background-color: #673de6;
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    padding: 0.6rem 0;
+}
+.service-detail {
+    display: flex;
+    padding: 2.2rem 0rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 3px;
+}
+.service-detail > div {
+    width: 33%;
+}
+.service-detail-item {
+    display: flex;
+    align-items: center;
+    margin: 0.6rem 0;
+    /* border: 1px solid red; */
+}
+.service-detail-item > p:nth-child(2) {
+    margin: 0 0.3rem;
+    font-weight: 600;
+}
+.service-detail-item > p:nth-child(3) {
+    margin: 0 0.2rem;
+}
+.service-detail-item .fa-circle-question {
+    margin-top: 3px;
+}
+.service-detail-item .fa-check {
+    color: #009a67;
+    font-size: 15px;
+}
+
+/*pricing seconday*/
+
+.pricing-secondary {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green; */
+    font-weight: 600;
+    color: #2f1c6a;
+}
+.pricing-secondary > p:nth-child(1) {
+    /* border: 1px solid white; */
+    padding-top: 0.7rem;
+    font-size: 22px;
+}
+.pricing-secondary > p:nth-child(3){
+    display: flex;
+    align-items: flex-end;
+    /* border: 1px solid white; */
+    font-size: 18px;
+    padding-bottom: 0.7rem;
+}
+.pricing-secondary > h1 {
+    font-size: 52px;
+    font-weight: 600;
+}
+.pricing-secondary + p {
+    /* border: 1px solid black; */
+    font-size: 14px;
+    color: #2f1c6a;
+    font-weight: 600;
+    text-align: center;
+}
+.left, .right {
+    padding: 0.6rem 3rem;
+}
+.left, .middle {
+    border-right: 2px solid #c5c2ff;
+}
+.middle {
+    padding: 0.6rem 2.1rem;
+}
+/* features*/
+.features {
+    border-top: 2px solid rgba(0,0,0,0.02);
+    border-bottom: 2px solid rgba(0,0,0,0.02);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 3px;
+    border-radius: 0 0 8px 8px;
+}
+.features > p {
+    text-align: center;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 17px;
+}
+.features.color > p {
+    color: #673de6;
+}
+.plan-feature-heading {
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 1rem 0;
+}
+.plan-feature-container {
+    display: none;
+    transition: 0.3s;
+}
+.plan-feature-container.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
+}
+@keyframes fadeIn{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
