@@ -25,10 +25,22 @@ function Header() {
     //for responsive
     const {showMenu} = useContext(ResponsiveContext)
 
+    //nav bar background change on scroll
+    const [nav, setNav] = useState(false);
+    const changeBackround = () => {
+        
+        if (window.scrollY >= 50) {
+            setNav(true)
+        }else {
+            setNav(false)
+        }
+    }
+    window.addEventListener('scroll', changeBackround);
+
 
   return (
     <header className={showMenu ? "toggleActive" : null}>
-        <nav className={showMenu ? "toggleActive" : null}>
+        <nav className={(showMenu ? "toggleActive" : null) || (nav ? "active" : null)}>
             <div className='logo-lan-group'>
                 <h1>Hostinger</h1>
                 <div>

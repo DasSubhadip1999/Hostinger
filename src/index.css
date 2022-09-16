@@ -10,6 +10,7 @@ code {
 
 .container {
   font-family: 'Open Sans', sans-serif;
+  position: relative;
 }
 
 header {
@@ -17,16 +18,25 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 83vh;
+  height: 78vh;
   color: white;
-  position: relative;
+  padding-top: 4.6rem;
 }
 nav {
   /* border: 1px solid white; */
+  width: 97%;
   display: flex;
   justify-content: space-between;
   padding: 1.2rem 2.2rem;
-  /* background-color: rgba(0, 0, 0, 0.45); */
+  position: fixed;
+  top : 0;
+  z-index: 2;
+  transition: 0.2s;
+}
+nav.active {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: black;
 }
 .logo-lan-group {
   /* border: 1px solid yellow; */
@@ -72,19 +82,23 @@ nav {
   /* border: 1px solid skyblue; */
   display: flex;
   align-items: center;
+  font-weight: 600;
 }
 .menu-item {
   margin: 0 0.7rem;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.1s;
   position: relative;
 }
 .menu-item:hover {
   color: rgba(255, 255, 255, 0.655);
 }
+nav.active .menu-item:hover {
+  color: rgba(0, 0, 0, 0.878);
+}
 .menu-item > i {
   margin: 0 0.5rem;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .fa-angle-down.rotate {
   rotate: 180deg;
@@ -98,6 +112,7 @@ nav {
   border-radius: 3px;
   padding: 18px;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .item-detail::after {
   content: "";
@@ -146,10 +161,13 @@ nav {
   align-items: center;
   justify-content: space-around;
   border: 1px solid white;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 0 0.3rem;
   cursor: pointer;
   transition: 0.2s;
+}
+nav.active .login {
+  border: 1px solid black;
 }
 .login:hover {
   background-color: rgba(0, 0, 0, 0.47);

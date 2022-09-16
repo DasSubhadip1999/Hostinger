@@ -1,0 +1,20 @@
+.our-services-heading {
+    text-align: center;
+    margin: 2rem 0;
+    color: #2f1c6a;
+}
+.our-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.1rem;
+    width: 75%;
+    margin: 1rem auto;
+}
+.our-services-grid > div {
+    display: flex;
+    align-items: center;
+}
+.our-services-grid > div > p {
+    font-weight: 600;
+    font-size: 22px;
+}
