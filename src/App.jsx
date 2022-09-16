@@ -1,4 +1,5 @@
 import Header from "./Components/Header"
+import Services from "./Components/Services/Services";
 import {ResponsiveProvider} from "./Context/ResponsiveContext";
 
 
@@ -7,6 +8,7 @@ function App() {
     <ResponsiveProvider>
       <div className="container">
           <Header />
+          <Services />
       </div>
     </ResponsiveProvider>
   )
