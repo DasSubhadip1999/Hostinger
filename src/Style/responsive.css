@@ -1,5 +1,4 @@
-@media screen and (max-width : 415px) {
-
+@media  screen and (max-width : 1210px) {
     header {
         height : 78vh;
     }
@@ -16,10 +15,10 @@
         border: 1px 0px 1px 0px solid rgba(0, 0, 0, 0.405);
     }
     .logo-lan-group h1::first-letter {
-        font-size: 14px;
+        font-size: 18px;
     }
     .logo-lan-group h1 {
-        font-size: 11px;
+        font-size: 15px;
     }
     .logo-lan-group img {
         width: 25px;
@@ -93,6 +92,22 @@
         font-size: 17px;
     }
 
+    /* campaign section */
+    .campaign-wrapper {
+        border: 1px solid red;
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width : 420px) {
+    /* logo section*/
+    .logo-lan-group h1::first-letter {
+        font-size: 14px;
+    }
+    .logo-lan-group h1 {
+        font-size: 11px;
+    }
     /* campaign section */
     .campaign {
         width: 99%;
