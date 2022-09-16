@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import ResponsiveContext from '../Context/ResponsiveContext';
 import MenuItem from './MenuItem';
 import menuItemData from '../Data/menuItemData';
+import Campaign from './Campaign';
+// for responsive
 import ToggleMenu from './Responsive components/ToggleMenu';
 import ToggleMenuItem from './Responsive components/ToggleMenuItem';
 
@@ -52,11 +54,18 @@ function Header() {
 
                 </div>
             </div>
+            {/* for mobile navbar */}
             <ToggleMenu />
         </nav>
+        {/* for mobile menubar starts */}
         {
             showMenu && <ToggleMenuItem />
-        }          
+        }
+        {/* for mobile menubar ends */}
+
+        {/*campaign section starts*/}
+        <Campaign />
+
     </header>
   )
 }

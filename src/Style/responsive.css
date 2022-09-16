@@ -93,5 +93,31 @@
         font-size: 17px;
     }
 
+    /* campaign section */
+    .campaign {
+        width: 99%;
+    }
+    .campaign-wrapper {
+        width: 90%;
+    }
+    .campaign-wrapper > h2 {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .pricing > h1 {
+        font-size: 50px;
+    }
+    .pricing + p {
+        border: 1px solid white;
+        padding: 0;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .pricing > p:nth-child(1) {
+        padding-top: 0.5rem;
+        font-size: 25px;
+    }
+
+
     
 }

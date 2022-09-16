@@ -13,7 +13,7 @@ code {
 }
 
 header {
-  background-image: url("assets/bg.jpg");
+  background-image: url("assets/bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -26,7 +26,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1.2rem 2.2rem;
-  background-color: rgba(0, 0, 0, 0.45);
+  /* background-color: rgba(0, 0, 0, 0.45); */
 }
 .logo-lan-group {
   /* border: 1px solid yellow; */
@@ -97,6 +97,7 @@ nav {
   background-color: white;
   border-radius: 3px;
   padding: 18px;
+  border-radius: 8px;
 }
 .item-detail::after {
   content: "";
@@ -159,5 +160,110 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+/* campaign section */
+.campaign {
+  width: calc(99% + 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.campaign-wrapper {
+  width: 38%;
+  /* border: 1px solid white; */
+  margin: 1.8rem 0;
+}
+.campaign-wrapper > h2 {
+  font-size: 33px;
+  text-align: center;
+}
+.pricing {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid green; */
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+.pricing > p:nth-child(1) {
+  border: 1px solid white;
+  padding-top: 0.4rem;
+  font-size: 28px;
+}
+.pricing > p:nth-child(3){
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid white;
+  font-size: 21px;
+}
+.pricing > h1 {
+  font-size: 64px;
+  margin: 0 0.1rem;
+}
+.pricing + p {
+  /* border: 1px solid white; */
+  text-align: center;
+  padding: 0.1rem 6rem;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.8rem 0;
+}
+.btn {
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+  display: block;
+  margin: 0.7rem auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.btn + p {
+  text-align: center;
+  margin: 0.8rem 0;
+}
+
+/* timer */
+
+.timer > div {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: white;
+  color: black;
+  margin: 0.4rem;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  font-size: 20px;
+}
+.timer > div::after {
+  position: absolute;
+  bottom: -19px;
+  color: white;
+  font-size: 13px;
+}
+.timer > div:nth-child(1)::after {
+  content: "days";
+}
+.timer > div:nth-child(2)::after {
+  content: "hours";
+}
+.timer > div:nth-child(3)::after {
+  content: "minutes";
+}
+.timer > div:nth-child(4)::after {
+  content: "seconds";
 }
 
