@@ -1,0 +1,88 @@
+.videocard-container {
+    /* border: 1px solid red; */
+    padding: 1.3rem 10rem;
+
+}
+.videocard-wrapper {
+    display: flex;
+    margin: 0.5rem 0;
+}
+.videocard-wrapper:nth-of-type(even){
+    flex-direction: row-reverse;
+}
+
+.video {
+    /* border: 1px solid blue; */
+    width: 52%;
+    display: grid;
+    place-items: center;
+}
+.video > video {
+    width: 32.6rem;
+    height: 28.3rem;
+}
+.video-text {
+    width: 48%;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.video-text *{
+    margin: 0.35rem 4.2rem;
+}
+.video-text h6 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.51);
+    letter-spacing: 2px;
+}
+.video-text h2 {
+    font-weight: 600;
+    font-size: 32px;
+}
+.video-text > p {
+    color: rgba(0, 0, 0, 0.91);
+
+}
+.video-text small {
+    font-size: 16px;
+    text-decoration: underline;
+    color: blueviolet;
+    cursor: pointer;
+}
+.videocard-container + h1 {
+    text-align: center;
+    margin: 0.7rem 0;
+    padding: 1rem 0;
+    /* border: 1px solid red; */
+}
+.user-friendly-wrapper {
+    /* border: 1px solid red; */
+    display: flex;
+}
+.user-friendly-wrapper > video {
+    width: 47rem;
+    height: 41rem;
+    /* border: 1px solid red; */
+}
+.user-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.user-text > div {
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: 0.7rem 0 0.7rem 6rem;
+}
+.user-text > div *{
+    margin: 0.8rem 0;
+}
+.user-text > div > p{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.81);
+}
+.user-text > div > h4 {
+    font-size: 18px;
+}

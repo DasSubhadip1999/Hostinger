@@ -6,7 +6,7 @@
 .our-services-grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 1.1rem;
+    gap: 1rem;
     width: 75%;
     margin: 1rem auto;
 }
@@ -16,5 +16,5 @@
 }
 .our-services-grid > div > p {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 21px;
 }

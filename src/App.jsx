@@ -3,6 +3,7 @@ import Services from "./Components/Services/Services";
 import {ResponsiveProvider} from "./Context/ResponsiveContext";
 import OurServices from "./Components/OurServicesInclude/OurServices";
 import DomainName from "./Components/DomainName/DomainName";
+import VideoCards from "./Components/VideoCards/VideoCards";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Services />
           <OurServices />
           <DomainName />
+          <VideoCards />
       </div>
     </ResponsiveProvider>
   )

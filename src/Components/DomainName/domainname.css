@@ -1,0 +1,44 @@
+.domain-name {
+    /* border: 1px solid red; */
+    background-color: #f4f5ff;
+    padding: 2rem 0;
+    margin: 3.5rem 0;
+}
+.domain-name h1 {
+    text-align: center;
+    margin: 1rem 0;
+    color: #2f1c6a;
+}
+.domain-name > p {
+    width: 50%;
+    text-align: center;
+    margin: 0.6rem auto;
+    /* border: 1px solid red; */
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.9);
+}
+.input-group {
+    margin: 2rem 0;
+    position: relative;
+}
+.input-group > input {
+    margin: 0 auto;
+    display: block;
+    padding: 0.5rem 1.5rem;
+    width: 45%;
+    border-radius: 25px;
+    border: none;
+    height: 38px;
+    font-size: 18px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: rgba(0,0,0,0.75);
+}
+.input-group > input:focus {
+    outline: 1px solid #673de6;
+}
+.input-group .btn {
+    position: absolute;
+    right: 394px;
+    top: 0;
+}
