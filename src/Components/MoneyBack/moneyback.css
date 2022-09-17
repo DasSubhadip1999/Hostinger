@@ -1,0 +1,9 @@
+.money-back {
+    margin: 3.5rem 0;
+}
+.money-back *{
+    margin: 1.4rem 0;
+}
+.money-back > h1, .money-back > p {
+    text-align: center;
+}
