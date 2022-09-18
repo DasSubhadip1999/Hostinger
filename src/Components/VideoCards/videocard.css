@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #2f1c6a;
 }
 .video-text *{
     margin: 0.35rem 4.2rem;
@@ -34,16 +35,13 @@
 .video-text h6 {
     font-size: 16px;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.51);
+    /* color: rgba(0, 0, 0, 0.51); */
+    opacity: 0.5;
     letter-spacing: 2px;
 }
 .video-text h2 {
     font-weight: 600;
     font-size: 32px;
-}
-.video-text > p {
-    color: rgba(0, 0, 0, 0.91);
-
 }
 .video-text small {
     font-size: 16px;
@@ -56,6 +54,7 @@
     margin: 0.7rem 0;
     padding: 1rem 0;
     /* border: 1px solid red; */
+    color: #2f1c6a;
 }
 .user-friendly-wrapper {
     /* border: 1px solid red; */
@@ -70,6 +69,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #2f1c6a;
 }
 .user-text > div {
     /* border: 1px solid red; */

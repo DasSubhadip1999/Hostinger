@@ -11,7 +11,7 @@ function Button({appearance, text}) {
     }else if ( appearance === "secondaryblue") {
       newStyle = {
         backgroundColor : "#491bd5",
-        width : '16.3rem',
+        width : '95%',
         height : '3rem',
         margin : "1rem auto"
       }

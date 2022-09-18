@@ -11,7 +11,7 @@ function Services() {
 
   return (
     <div className='services-container'>
-      <div className='web-ide'>
+      <div className='web-ide' id='web'>
         <div>
           <i className="fa-brands fa-wordpress"></i>
           <p>WordPress</p>
@@ -30,9 +30,9 @@ function Services() {
         <p>We prepared the best web hosting plan for you to start. You will be able to adjust plans as you go - our custom-built algorithm will provide suggestions based on your usage.</p>
       </div>
 
-      <div className='hosting-services'>
+      <div className='hosting-services' id='hosting-services'>
         <h3>Best Web Hosting</h3>
-        <div className='service-detail'>
+        <div className='service-detail' id='service-detail'>
           <div className='left'>
               {
                 serviceDetailData.left.map( (item) => {

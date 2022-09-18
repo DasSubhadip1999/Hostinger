@@ -1,4 +1,4 @@
-@media  screen and (max-width : 1210px) {
+@media (max-width : 1210px) {
     header {
         height : 78vh;
     }
@@ -101,6 +101,17 @@
 
 
 @media screen and (max-width : 420px) {
+    /* header*/
+    header {
+        height: 55vh;
+        padding-top: 4rem;
+    }
+
+    /*nav bar*/
+    nav {
+        width: 93%;;
+        border: 1px solid red;
+    }
     /* logo section*/
     .logo-lan-group h1::first-letter {
         font-size: 14px;
@@ -116,8 +127,9 @@
         width: 90%;
     }
     .campaign-wrapper > h2 {
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 600;
+        border: 1px solid red;
     }
     .pricing > h1 {
         font-size: 50px;
@@ -134,5 +146,90 @@
     }
 
 
-    
+    /* services section*/
+
+    .services-container {
+        border: 1px solid yellow;
+        /* display: none; */
+    }
+
+    #web {
+        width: 95%;
+        max-width: 90%;
+        overflow-x : auto;
+        border: 1px solid yellow;
+    }
+
+    .hosting-heading {
+        border: 1px solid yellow;
+    }
+
+    /*hosting services*/
+    #hosting-services {
+        width: 90%;
+        border: 1px solid red;
+    }
+    .service-detail {
+        flex-direction: column-reverse;
+    }
+    #service-detail > div {
+        width: 90%;
+    }
+    .right {
+        display: none;
+    }
+    #hosting-services .middle, #hosting-services .left {
+        border-right: none;
+    }
+
+    /*Our Services*/
+    .our-services-heading {
+        border: 1px solid blue;
+    }
+    #our-services-grid {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        border: 1px solid green;
+    }
+
+    /* domain name*/
+    .domain-name {
+        border: 1px solid red;
+    }
+
+    /* video cards*/
+    #videocard-container {
+        border: 1px solid blue;
+        padding: 0;
+    }
+    #videocard-wrapper {
+        flex-direction: column;
+    }
+    #video {
+        width: 90%;
+        border: 1px solid red;
+    }
+    #video-text {
+        width: 90%;
+        border: 1px solid yellow;
+        margin: 0;
+    }
+    #video > video {
+        width: 10rem;
+        height: 5rem;
+    }
+
+    /*user friendly wrapper*/
+    #user-friendly-wrapper {
+        flex-direction: column-reverse;
+    }
+    #user-friendly-wrapper > video {
+        width: 20rem;
+        height: 16rem;
+    }
+
+    /*footer*/
+    #footer-menu-container {
+        grid-template-columns: repeat(1,1fr);
+    }
 }

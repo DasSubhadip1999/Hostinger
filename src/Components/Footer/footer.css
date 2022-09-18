@@ -1,3 +1,38 @@
 footer {
-    border: 1px solid red;
+    background-color: #f4f5ff;
+    color: #2f1c6a;
+    margin: 0;
+    padding: 0;
+}
+.footer-menu-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 2rem 11.8rem;
+    gap: 2rem;
+    background-color: #f4f5ff;
+}
+.footer-menu-list > p {
+    font-size: 14px;
+    margin: 0.45rem 0;
+    font-weight: 600;
+    opacity: 0.8;
+}
+.footer-menu-list > p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer-menu-list > h4 {
+    margin: 0.9rem 0;
+    font-size: 18px;
+}
+.copyright {
+    width: 75%;
+    border-top: 1px solid #301c6a44;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.7;
 }

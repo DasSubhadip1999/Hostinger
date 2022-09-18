@@ -8,7 +8,7 @@ function OurServices() {
   return (
     <>
         <h1 className='our-services-heading'>Our services include:</h1>
-        <div className='our-services-grid'>
+        <div className='our-services-grid' id='our-services-grid'>
             {
                 OurServicesData.map( item => <OurServicesItem key={uuidv4()} data={item} />)
             }

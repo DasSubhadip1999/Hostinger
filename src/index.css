@@ -11,6 +11,7 @@ code {
 .container {
   font-family: 'Open Sans', sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 
 header {
@@ -258,7 +259,7 @@ nav.active .login {
 .timer > div {
   width: 3.5rem;
   height: 3.5rem;
-  background-color: white;
+  background-color: #EEF1FF;
   color: black;
   margin: 0.4rem;
   border-radius: 6px;
@@ -266,6 +267,8 @@ nav.active .login {
   place-items: center;
   position: relative;
   font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
 }
 .timer > div::after {
   position: absolute;
