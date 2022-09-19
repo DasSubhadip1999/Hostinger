@@ -39,7 +39,7 @@ function Header() {
 
 
   return (
-    <header className={showMenu ? "toggleActive" : null}>
+    <header id='header' className={showMenu ? "toggleActive" : null}>
         <nav className={(showMenu ? "toggleActive" : null) || (nav ? "active" : null)}>
             <div className='logo-lan-group'>
                 <h1>Hostinger</h1>
@@ -69,15 +69,17 @@ function Header() {
             {/* for mobile navbar */}
             <ToggleMenu />
         </nav>
-        {/* for mobile menubar starts */}
         {
-            showMenu && <ToggleMenuItem />
+            showMenu && (
+                <div className='toggle-menu-container'>
+                    {/* for mobile menubar starts */}
+                    <ToggleMenuItem />
+                     {/* for mobile menubar ends */}   
+                </div>
+            )
         }
-        {/* for mobile menubar ends */}
-
-        {/*campaign section starts*/}
+       {/*campaign section starts*/} 
         <Campaign />
-
     </header>
   )
 }

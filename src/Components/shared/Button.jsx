@@ -11,16 +11,13 @@ function Button({appearance, text}) {
     }else if ( appearance === "secondaryblue") {
       newStyle = {
         backgroundColor : "#491bd5",
-        width : '95%',
+        width : '15rem',
         height : '3rem',
         margin : "1rem auto"
       }
     }else if ( appearance === "inputbtn") {
       newStyle = {
         backgroundColor : "#727586",
-        margin : 0,
-        width : '10rem',
-        height : '3.4rem'
       }
     }
   return (

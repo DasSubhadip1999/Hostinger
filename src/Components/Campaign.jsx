@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import Button from './shared/Button'
+import ResponsiveContext from '../Context/ResponsiveContext';
 
 
 
@@ -34,6 +35,7 @@ function Campaign() {
     useEffect( () => {
       startTimer()
     })
+    const {showMenu} = useContext(ResponsiveContext)
 
   return (
     <div className='campaign'>

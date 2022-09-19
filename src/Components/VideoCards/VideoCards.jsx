@@ -14,6 +14,7 @@ function VideoCards() {
             VideoCardData.map( item => <VideoCardWrapper key={uuidv4()} data={item} />)
         }
     </div>
+    
     <h1>User-Friendly Control Panel</h1>
     <div className='user-friendly-wrapper' id='user-friendly-wrapper'>
         <video src='https://assets.hostinger.com/videos/homepage2020/user-friendly-cp-2020-7ab2c70b24.mp4' autoPlay muted />

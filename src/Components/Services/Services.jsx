@@ -25,7 +25,7 @@ function Services() {
           <p>cloudflare</p>
         </div>
       </div>
-      <div className='hosting-heading'>
+      <div className='hosting-heading' id='hosting-heading'>
         <h2>All-In-One Web Hosting</h2>
         <p>We prepared the best web hosting plan for you to start. You will be able to adjust plans as you go - our custom-built algorithm will provide suggestions based on your usage.</p>
       </div>
@@ -60,8 +60,8 @@ function Services() {
 
         {/* display on click starts */}
         <div className={ isService ? 'plan-feature-container show' : 'plan-feature-container'}>
-            <h4 className='plan-feature-heading'>Plan Features</h4>
-            <div className='service-detail'>
+            <h4 className='plan-feature-heading' id='plan-feature-heading'>Plan Features</h4>
+            <div className='service-detail' id='service-detail-onclick'>
               <div className='left'>
                   {
                     planFeatureData.left.map( (item) => {
@@ -86,7 +86,7 @@ function Services() {
             </div>
         </div>
         {/* display on click ends */}
-        <div className={isService ? 'features color' : 'features'}>
+        <div className={isService ? 'features color' : 'features'} id='features'>
            <p 
             onClick={() => {setIsService( prev => !prev)}} >
             {isService ? 'See Less' : "See All Features"}
