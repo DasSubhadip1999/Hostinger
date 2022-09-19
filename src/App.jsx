@@ -8,21 +8,34 @@ import MoneyBack from "./Components/MoneyBack/MoneyBack";
 import Footer from "./Components/Footer/Footer";
 import ContactUs from "./Components/Contact/ContactUs";
 
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import LoginPage from "./Components/Pages/LoginPage";
+
 
 function App() {
 
   return (
     <ResponsiveProvider>
-      <div className="container">
-          <Header />
-          <Services />
-          <OurServices />
-          <DomainName />
-          <VideoCards />
-          <MoneyBack />
-          <ContactUs />
-          <Footer />
-      </div>
+      <Router>
+        <div className="container">
+          <Routes>
+            <Route path="/" element ={
+              <>
+                <Header />
+                <Services />
+                <OurServices />
+                <DomainName />
+                <VideoCards />
+                <MoneyBack />
+                <ContactUs />
+                <Footer />
+              </>
+            }>
+            </Route>
+            <Route path="/login" element={<LoginPage />}></Route>
+          </Routes>
+        </div>
+      </Router>
     </ResponsiveProvider>
   )
 }

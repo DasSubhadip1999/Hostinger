@@ -159,16 +159,25 @@ nav.active .menu-item:hover {
   display: flex;
   justify-content: space-between;
 }
+.login-cart-group a {
+  text-decoration: none;
+  width: 5rem;
+  color: #fff;
+}
 .login {
-  width: 50%;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   border: 1px solid white;
   border-radius: 20px;
-  padding: 0 0.3rem;
   cursor: pointer;
   transition: 0.2s;
+  padding: 0 0.2rem;
+}
+nav.active .login-cart-group a {
+  color: black;
 }
 nav.active .login {
   border: 1px solid black;

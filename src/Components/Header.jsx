@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
 import ResponsiveContext from '../Context/ResponsiveContext';
 import MenuItem from './MenuItem';
 import menuItemData from '../Data/menuItemData';
@@ -55,10 +56,12 @@ function Header() {
                     }
                 </div>
                 <div className='login-cart-group'>
+                    <Link to='/login'>
                     <div className='login'>
                         <i className="fa-solid fa-lock"></i>
                         <p>Log In</p>
-                    </div>
+                    </div>  
+                    </Link>
                     <div className='cart'>
                         <i className="fa-solid fa-cart-shopping"></i>
                         <p>Cart</p>
