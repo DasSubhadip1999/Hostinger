@@ -75,7 +75,11 @@
         background-color: white;
         padding: 1.3rem 0;
     }
-    .toggle-menu-login > div {
+    .toggle-menu-login a {
+        width: 97%;
+        text-decoration: none;
+    }
+    .toggle-menu-login div {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -84,9 +88,10 @@
         width: 90%;
         border-radius: 20px;
         padding: 0.7rem 0;
+        margin: 0 auto;
     }
-    .toggle-menu-login > div i,
-    .toggle-menu-login > div p {
+    .toggle-menu-login div i,
+    .toggle-menu-login div p {
         margin: 0 0.2rem;
         font-weight: 600;
         font-size: 17px;

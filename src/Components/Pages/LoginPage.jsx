@@ -6,7 +6,10 @@ import {Link} from 'react-router-dom'
 function LoginPage() {
   return (
     <div className='login-page'>
-        <h3>
+        <h3 className='tooltip'>
+            <span className='tooltiptext'>
+            Home <span/>
+            </span>
             <Link to='/'>
                 Hostinger
             </Link>

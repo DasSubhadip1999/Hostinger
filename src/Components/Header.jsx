@@ -11,10 +11,12 @@ import ToggleMenuItem from './Responsive components/ToggleMenuItem';
 function Header() {
 
     const [flag, setFlag] = useState("");
+    const [isFlagLoaded, setIsFlagLoaded] = useState(false)
     const getFlag = async () => {
         try {
             const res = await fetch("https://countryflagsapi.com/png/in");
             setFlag(res.url)
+            setIsFlagLoaded(true)
         } catch (error) {
             console.log(error)
         }
@@ -45,8 +47,13 @@ function Header() {
             <div className='logo-lan-group'>
                 <h1>Hostinger</h1>
                 <div>
-                    <img src={flag} alt='flag' />
-                    <p>English</p>
+                    {
+                        isFlagLoaded && 
+                        ( <>
+                            <img src={flag} alt='flag' />
+                            <p>English</p>
+                        </>)
+                    }
                 </div>
             </div>
             <div className='menubar-container'>
