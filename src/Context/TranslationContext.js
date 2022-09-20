@@ -51,6 +51,15 @@ export const TranslationProvider = ({children}) => {
     const allInOne = t("all_in_one");
     const allInOneSubText = t("allInOneSubText");
     const bWH = t("bWH");
+    const renew = t("renewCharge");
+    const selectText = t("selectText");
+    const sAF = t("sAF");
+    const seeLess = t("seeLess");
+    const oSI = t("oSI");
+    const findDomainName = t("findDomainName");
+    const domainSubText = t("domainSubText");
+    const domainInputPlaceholder = t("domainInputPlaceholder");
+    const searchText = t("searchText")
 
     //show lan option onclick
     const [islanClick, setIsLanClick] = useState(false);
@@ -104,12 +113,21 @@ export const TranslationProvider = ({children}) => {
                 allInOne,
                 allInOneSubText,
                 bWH,
+                renew,
                 setLanguage,
                 lan,
                 islanClick,
                 showLanOption,
                 i18n,
                 setLan,
+                selectText,
+                sAF,
+                seeLess,
+                oSI,
+                findDomainName,
+                domainSubText,
+                domainInputPlaceholder,
+                searchText,
             }
         }
         >

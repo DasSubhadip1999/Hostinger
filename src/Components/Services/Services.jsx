@@ -9,7 +9,7 @@ import planFeatureData from '../../Data/planFeatureData';
 import TranslationContext from '../../Context/TranslationContext';
 
 function Services() {
-  const { allInOne, allInOneSubText, bWH} = useContext(TranslationContext);
+  const { allInOne, allInOneSubText, bWH, moneySign, perMonth, currency, renew, selectText, sAF, seeLess} = useContext(TranslationContext);
   const [isService, setIsService] = useState(false);
 
   return (
@@ -45,12 +45,12 @@ function Services() {
           </div>
           <div className='middle'>
             <div className='pricing-secondary'>
-                <p>₹</p>
-                <h1>149.00</h1>
-                <p>/mo</p>
+                <p>{moneySign}</p>
+                <h1>{currency}</h1>
+                <p>{perMonth}</p>
             </div>
-            <p>₹249.00/mo when you renew</p>
-            <Button appearance="secondaryblue" text="Select" />
+            <p>{renew}</p>
+            <Button appearance="secondaryblue" text={selectText} />
           </div>
           <div className='right'>
               {
@@ -92,7 +92,7 @@ function Services() {
         <div className={isService ? 'features color' : 'features'} id='features'>
            <p 
             onClick={() => {setIsService( prev => !prev)}} >
-            {isService ? 'See Less' : "See All Features"}
+            {isService ? `${seeLess}` : `${sAF}` }
            </p>
         </div>
       </div>

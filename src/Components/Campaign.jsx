@@ -18,7 +18,7 @@ function Campaign() {
     const [timerSeconds, setTimerSeconds] = useState("");
     let interval;
     const startTimer = () => {
-      const targetDate = new Date("sep 22, 2022 24:00:00").getTime();
+      const targetDate = new Date("oct 2, 2022 24:00:00").getTime();
       interval = setInterval( () => {
         const now = new Date().getTime();
         const diff = targetDate - now;

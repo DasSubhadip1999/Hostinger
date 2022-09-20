@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import TranslationContext from '../../Context/TranslationContext'
 import Button from '../shared/Button'
 import './domainname.css'
 
 function DomainName() {
+  const { findDomainName, domainSubText, domainInputPlaceholder, searchText} = useContext(TranslationContext);
   return (
     <div className='domain-name' id='domain-name'>
-        <h1>Find the perfect domain name</h1>
-        <p>Enter domain name of your choice and pick any extension name on the next step (choose between .in, .com, .online, .live, .store, .info and many more)</p>
+        <h1>{findDomainName}</h1>
+        <p>{domainSubText}</p>
         <div className='input-group'>
-            <input type="text" placeholder='Type in that perfect domain name' />
-            <Button appearance="inputbtn" text="Search" />
+            <input type="text" placeholder={domainInputPlaceholder} />
+            <Button appearance="inputbtn" text={searchText} />
         </div>
     </div>
   )

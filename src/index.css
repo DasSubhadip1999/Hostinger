@@ -45,12 +45,21 @@ nav.active {
 }
 .logo-lan-group h1::first-letter {
   font-size: 26px;
+  color: #FFE9AE;
+  font-weight: bold;
+}
+nav.active .logo-lan-group h1::first-letter {
+  color: #002B5B;
+}
+nav.active .logo-lan-group h1 {
+  color: #FF7F3F;
 }
 .logo-lan-group h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
   font-size: 18px;
+  color: #EEE3CB;
 }
 .logo-lan-group > div {
   display: flex;
@@ -63,6 +72,9 @@ nav.active {
   box-shadow: white 0px 0px 0px 1px;
   margin: 0 0.4rem;
   cursor: pointer;
+}
+nav.active .logo-lan-group img {
+  box-shadow: rgba(0, 0, 0, 0.785) 0px 0px 0px 1px;
 }
 .logo-lan-group img+p {
   font-size: 16px;
@@ -127,7 +139,7 @@ nav.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0.6rem;
+  margin: 0 0.7rem;
   cursor: pointer;
   transition: 0.1s;
   position: relative;
@@ -306,8 +318,8 @@ nav.active .login {
 .timer > div {
   width: 3.5rem;
   height: 3.5rem;
-  background-color: #EEF1FF;
-  color: black;
+  background-color: #D2DAFF;
+  color: #400D51;
   margin: 0.4rem;
   border-radius: 6px;
   display: grid;
@@ -320,7 +332,7 @@ nav.active .login {
 .timer > div span {
   position: absolute;
   bottom: -19px;
-  color: white;
+  color: #FFF6BF;
   font-size: 13px;
 }
 

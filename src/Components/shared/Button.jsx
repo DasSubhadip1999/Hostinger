@@ -4,7 +4,7 @@ function Button({appearance, text}) {
     let newStyle;
     if( appearance === "primaryred") {
       newStyle = {
-        backgroundColor : "#fc5185",
+        backgroundColor : "#5F6F94",
         width : '15rem',
         height : '3rem'
       }
