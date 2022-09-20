@@ -7,7 +7,7 @@ import TranslationContext from '../Context/TranslationContext';
 
 function Campaign() {
     //for translation
-    const {cMH, cSH, cBT, cST, day, hour, minute, second} = useContext(TranslationContext);
+    const {cMH, cSH, cBT, cST, day, hour, minute, second, moneySign, perMonth, currency} = useContext(TranslationContext);
 
 
 
@@ -47,9 +47,9 @@ function Campaign() {
         <div className='campaign-wrapper'>
             <h2>{cMH}</h2>
             <div className='pricing'>
-                <p>₹</p>
-                <h1>149.00</h1>
-                <p>/mo</p>
+                <p>{moneySign}</p>
+                <h1>{currency}</h1>
+                <p>{perMonth}</p>
             </div>
             <p>{cSH}</p>
             <div className='timer'> 
