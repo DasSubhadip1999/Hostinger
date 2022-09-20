@@ -1,33 +1,33 @@
 import React, { useContext, useEffect, useState } from 'react'
+import {v4 as uuidv4} from 'uuid';
 import {Link} from 'react-router-dom'
 import ResponsiveContext from '../Context/ResponsiveContext';
 import TranslationContext from '../Context/TranslationContext';
 import MenuItem from './MenuItem';
 import menuItemData from '../Data/menuItemData';
 import Campaign from './Campaign';
+import LanguageOption from './shared/LanguageOption';
 // for responsive
 import ToggleMenu from './Responsive components/ToggleMenu';
 import ToggleMenuItem from './Responsive components/ToggleMenuItem';
 
 function Header() {
     //for translation
-    const {lng, login, cart} = useContext(TranslationContext)
-
-    const [flag, setFlag] = useState("");
-    const [isFlagLoaded, setIsFlagLoaded] = useState(false)
-    const getFlag = async () => {
-        try {
-            const res = await fetch(`https://countryflagsapi.com/png/${"fr"}`);
-            setFlag(res.url)
-            setIsFlagLoaded(true)
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    const {t, login, cart, lan, islanClick, showLanOption, i18n, setLan } = useContext(TranslationContext)
+    //get language data from LS
     useEffect( () => {
-        getFlag();
-    }, [])
+        let languageObject = JSON.parse(localStorage.getItem("languagedetail")) || {
+            language: "en", 
+            imgUrl : "https://countryflagsapi.com/png/in", languageName : "English"
+        }
+        i18n.changeLanguage(languageObject.language);
+        setLan( {
+            img : languageObject.imgUrl,
+            text : languageObject.languageName
+        })
 
+    },[])
+    
     //for responsive
     const {showMenu} = useContext(ResponsiveContext)
 
@@ -50,12 +50,15 @@ function Header() {
             <div className='logo-lan-group'>
                 <h1>Hostinger</h1>
                 <div>
+                    <img onClick={showLanOption} src={lan.img} alt=""/>
+                    <p>{`${t(lan.text)}`}</p>
                     {
-                        isFlagLoaded && 
-                        ( <>
-                            <img src={flag} alt='flag' />
-                            <p>{lng}</p>
-                        </>)
+                        islanClick && (
+                            <div className='lan-option'>
+                                <LanguageOption key={uuidv4()} imgLink="https://countryflagsapi.com/png/fr" text="French" lanCode="fr" />
+                                <LanguageOption key={uuidv4()} imgLink="https://countryflagsapi.com/png/in" text="English" lanCode="en" />
+                            </div>
+                        )
                     }
                 </div>
             </div>

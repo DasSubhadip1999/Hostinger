@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import {v4 as uuidv4} from "uuid"
 import "./services.css";
 import ServiceDetailItem from './ServiceDetailItem';
 import Button from '../shared/Button';
 import serviceDetailData from '../../Data/serviceDetailData';
 import planFeatureData from '../../Data/planFeatureData';
+//translation
+import TranslationContext from '../../Context/TranslationContext';
 
 function Services() {
+  const { allInOne, allInOneSubText, bWH} = useContext(TranslationContext);
   const [isService, setIsService] = useState(false);
 
   return (
@@ -26,12 +29,12 @@ function Services() {
         </div>
       </div>
       <div className='hosting-heading' id='hosting-heading'>
-        <h2>All-In-One Web Hosting</h2>
-        <p>We prepared the best web hosting plan for you to start. You will be able to adjust plans as you go - our custom-built algorithm will provide suggestions based on your usage.</p>
+        <h2>{allInOne}</h2>
+        <p>{allInOneSubText}</p>
       </div>
 
       <div className='hosting-services' id='hosting-services'>
-        <h3>Best Web Hosting</h3>
+        <h3>{bWH}</h3>
         <div className='service-detail' id='service-detail'>
           <div className='left'>
               {
