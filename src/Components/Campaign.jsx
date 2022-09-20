@@ -1,10 +1,17 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState, useContext} from 'react'
 import Button from './shared/Button'
+import TranslationContext from '../Context/TranslationContext';
 
 
 
 
 function Campaign() {
+    //for translation
+    const {cMH, cSH, cBT, cST, day, hour, minute, second} = useContext(TranslationContext);
+
+
+
+
     const [timerDays, setTimerDays] = useState("");
     const [timerHours, setTimerHours] = useState("");
     const [timerMinutes, setTimerMinutes] =useState("");
@@ -38,21 +45,21 @@ function Campaign() {
   return (
     <div className='campaign'>
         <div className='campaign-wrapper'>
-            <h2>Savings to Set Your Website in Motion</h2>
+            <h2>{cMH}</h2>
             <div className='pricing'>
                 <p>₹</p>
                 <h1>149.00</h1>
                 <p>/mo</p>
             </div>
-            <p>Make moves with a free domain and SSL included with a four-year subscription.</p>
+            <p>{cSH}</p>
             <div className='timer'> 
-                <div>{timerDays}</div>:
-                <div>{timerHours}</div>:
-                <div>{timerMinutes}</div>:
-                <div>{timerSeconds}</div>
+                <div>{timerDays} <span>{day}</span></div>:
+                <div>{timerHours} <span>{hour}</span></div>:
+                <div>{timerMinutes} <span>{minute}</span></div>:
+                <div>{timerSeconds} <span>{second}</span></div>
             </div>
-            <Button appearance="primaryred" text="get started" />
-            <p>Get exclusive 30-day money-back guarantee</p>
+            <Button appearance="primaryred" text={cBT} />
+            <p>{cST}</p>
         </div>
     </div>
   )

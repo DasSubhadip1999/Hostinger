@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import ResponsiveContext from '../Context/ResponsiveContext';
+import TranslationContext from '../Context/TranslationContext';
 import MenuItem from './MenuItem';
 import menuItemData from '../Data/menuItemData';
 import Campaign from './Campaign';
@@ -9,12 +10,14 @@ import ToggleMenu from './Responsive components/ToggleMenu';
 import ToggleMenuItem from './Responsive components/ToggleMenuItem';
 
 function Header() {
+    //for translation
+    const {lng, login, cart} = useContext(TranslationContext)
 
     const [flag, setFlag] = useState("");
     const [isFlagLoaded, setIsFlagLoaded] = useState(false)
     const getFlag = async () => {
         try {
-            const res = await fetch("https://countryflagsapi.com/png/in");
+            const res = await fetch(`https://countryflagsapi.com/png/${"fr"}`);
             setFlag(res.url)
             setIsFlagLoaded(true)
         } catch (error) {
@@ -51,7 +54,7 @@ function Header() {
                         isFlagLoaded && 
                         ( <>
                             <img src={flag} alt='flag' />
-                            <p>English</p>
+                            <p>{lng}</p>
                         </>)
                     }
                 </div>
@@ -66,12 +69,12 @@ function Header() {
                     <Link to='/login'>
                     <div className='login'>
                         <i className="fa-solid fa-lock"></i>
-                        <p>Log In</p>
+                        <p>{login}</p>
                     </div>  
                     </Link>
                     <div className='cart'>
                         <i className="fa-solid fa-cart-shopping"></i>
-                        <p>Cart</p>
+                        <p>{cart}</p>
                     </div>
 
                 </div>

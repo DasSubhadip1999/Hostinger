@@ -1,6 +1,7 @@
 import Header from "./Components/Header"
 import Services from "./Components/Services/Services";
 import {ResponsiveProvider} from "./Context/ResponsiveContext";
+import {TranslationProvider} from './Context/TranslationContext'
 import OurServices from "./Components/OurServicesInclude/OurServices";
 import DomainName from "./Components/DomainName/DomainName";
 import VideoCards from "./Components/VideoCards/VideoCards";
@@ -15,28 +16,30 @@ import LoginPage from "./Components/Pages/LoginPage";
 function App() {
 
   return (
-    <ResponsiveProvider>
-      <Router>
-        <div className="container">
-          <Routes>
-            <Route path="/" element ={
-              <>
-                <Header />
-                <Services />
-                <OurServices />
-                <DomainName />
-                <VideoCards />
-                <MoneyBack />
-                <ContactUs />
-                <Footer />
-              </>
-            }>
-            </Route>
-            <Route path="/login" element={<LoginPage />}></Route>
-          </Routes>
-        </div>
-      </Router>
-    </ResponsiveProvider>
+    <TranslationProvider>
+      <ResponsiveProvider>
+        <Router>
+          <div className="container">
+            <Routes>
+              <Route path="/" element ={
+                <>
+                  <Header />
+                  <Services />
+                  <OurServices />
+                  <DomainName />
+                  <VideoCards />
+                  <MoneyBack />
+                  <ContactUs />
+                  <Footer />
+                </>
+              }>
+              </Route>
+              <Route path="/login" element={<LoginPage />}></Route>
+            </Routes>
+          </div>
+        </Router>
+      </ResponsiveProvider>
+    </TranslationProvider>
   )
 }
 

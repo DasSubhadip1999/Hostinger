@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { v4 as uuidv4} from "uuid";
 import {AnimatePresence, motion} from "framer-motion"
 import MenuItemList from './MenuItemList'
+import TranslationContext from '../Context/TranslationContext';
 
 function MenuItem({data}) {
+  const { t } = useContext(TranslationContext)
   const [isDrop, setIsDrop] = useState(false)
   const setDrop = () => {setIsDrop( prev => !prev)}
   return (
     <AnimatePresence>
     <div onClick={setDrop}  className='menu-item'>
-        {data.title}
+        {`${t(data.title)}`}
         <i className={ isDrop ? "fa-solid fa-angle-down rotate" : "fa-solid fa-angle-down"}></i>
         {
           isDrop && (
