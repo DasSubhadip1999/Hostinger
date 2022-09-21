@@ -9,7 +9,7 @@ import planFeatureData from '../../Data/planFeatureData';
 import TranslationContext from '../../Context/TranslationContext';
 
 function Services() {
-  const { allInOne, allInOneSubText, bWH, moneySign, perMonth, currency, renew, selectText, sAF, seeLess} = useContext(TranslationContext);
+  const { t, allInOne, allInOneSubText, bWH, moneySign, perMonth, currency, renew, selectText, sAF, seeLess} = useContext(TranslationContext);
   const [isService, setIsService] = useState(false);
 
   return (
@@ -63,7 +63,7 @@ function Services() {
 
         {/* display on click starts */}
         <div className={ isService ? 'plan-feature-container show' : 'plan-feature-container'}>
-            <h4 className='plan-feature-heading' id='plan-feature-heading'>Plan Features</h4>
+            <h4 className='plan-feature-heading' id='plan-feature-heading'>{t("Plan Features")}</h4>
             <div className='service-detail' id='service-detail-onclick'>
               <div className='left'>
                   {

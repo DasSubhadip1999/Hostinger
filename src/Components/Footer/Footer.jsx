@@ -1,69 +1,71 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import TranslationContext from '../../Context/TranslationContext'
 import './footer.css'
 
 function Footer() {
+   const { t } = useContext(TranslationContext);
   return (
     <footer>
         <div className='footer-menu-container' id='footer-menu-container'>
              <div className='footer-menu-list'>
-                <h4>HOSTING</h4>
-                <p>Web Hosting</p>
-                <p>VPS Hosting</p>
-                <p>Minecraft Server Hosting</p>
-                <p>CyberPanel Hosting</p>
-                <p>Cloud Hosting</p>
-                <p>WordPress Hosting</p>
-                <p>Email Hosting</p>
-                <p>CMS Hosting</p>
-                <p>Ecommerce Hosting</p>
-                <p>Free Web Hosting</p>
-                <p>Online Store</p>
-                <p>Website Builder</p>
-                <p>Buy Hosting</p>
+                <h4>{t("HOSTING")}</h4>
+                <p>{t("Web Hosting")}</p>
+                <p>{t("VPS Hosting")}</p>
+                <p>{t("Minecraft Server Hosting")}</p>
+                <p>{t("CyberPanel Hosting")}</p>
+                <p>{t("Cloud Hosting")}</p>
+                <p>{t("WordPress Hosting")}</p>
+                <p>{t("Email Hosting")}</p>
+                <p>{t("CMS Hosting")}</p>
+                <p>{t("Ecommerce Hosting")}</p>
+                <p>{t("Free Web Hosting")}</p>
+                <p>{t("Online Store")}</p>
+                <p>{t("Website Builder")}</p>
+                <p>{t("Buy Hosting")}</p>
              </div>
              <div className='footer-menu-list'>
-                <h4>DOMAIN</h4>
-                <p>Domain Name Search</p>
-                <p>Domain Transfer</p>
-                <p>Free Domain Name</p>
-                <p>XYZ Domain</p>
-                <p>Cheap Domains</p>
-                <p>Domain Extensions</p>
-                <p>WHOIS Lookup</p>
-                <p>Free SSL Certificate</p>
+                <h4>{t("DOMAIN")}</h4>
+                <p>{t("Domain Name Search")}</p>
+                <p>{t("Domain Transfer")}</p>
+                <p>{t("Free Domain Name")}</p>
+                <p>{t("XYZ Domain")}</p>
+                <p>{t("Cheap Domains")}</p>
+                <p>{t("Domain Extensions")}</p>
+                <p>{t("WHOIS Lookup")}</p>
+                <p>{t("Free SSL Certificate")}</p>
              </div>
              <div className='footer-menu-list'>
-                <h4>INFORMATION</h4>
-                <p>Migrate to Hostinger</p>
-                <p>System status</p>
-                <p>Affiliate Program</p>
-                <p>Payment Medthos</p>
-                <p>Rewards</p>
-                <p>Reviews</p>
-                <p>Pricing</p>
-                <p>Sitemap</p>
+                <h4>{t("INFORMATION")}</h4>
+                <p>{t("Migrate to Hostinger")}</p>
+                <p>{t("System status")}</p>
+                <p>{t("Affiliate Program")}</p>
+                <p>{t("Payment Medthos")}</p>
+                <p>{t("Rewards")}</p>
+                <p>{t("Reviews")}</p>
+                <p>{t("Pricing")}</p>
+                <p>{t("Sitemap")}</p>
 
-                <h4>HELP</h4>
-                <p>Tutorials</p>
-                <p>Knowledge Base</p>
-                <p>Report Online Abuse</p>
+                <h4>{t("HELP")}</h4>
+                <p>{t("Tutorials")}</p>
+                <p>{t("Knowledge Base")}</p>
+                <p>{t("Report Online Abuse")}</p>
              </div>
              <div className='footer-menu-list'>
-                <h4>COMPANY</h4>
-                <p>About Hostinger</p>
-                <p>Our Technology</p>
-                <p>Roadmap</p>
-                <p>Customer Care</p>
-                <p>Blog</p>
+                <h4>{t("COMPANY")}</h4>
+                <p>{t("About Hostinger")}</p>
+                <p>{t("Our Technology")}</p>
+                <p>{t("Roadmap")}</p>
+                <p>{t("Customer Care")}</p>
+                <p>{t("Blog")}</p>
 
-                <h4>LEGAL</h4>
-                <p>Privacy Policy</p>
-                <p>Terms of Services</p>
+                <h4>{t("LEGAL")}</h4>
+                <p>{t("Privacy Policy")}</p>
+                <p>{t("Terms of Services")}</p>
              </div>   
         </div>
         <div className='copyright'>
-         <p>© 2004-2022 hostinger.in - India’s #1 Web Hosting & Domains provider.</p>
-         <p>Prices are listed without VAT</p>
+         <p>{t("© 2004-2022 hostinger.in - India’s #1 Web Hosting & Domains provider.")}</p>
+         <p>{t("Prices are listed without VAT")}</p>
         </div>
     </footer>
   )
