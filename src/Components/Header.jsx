@@ -30,7 +30,7 @@ function Header() {
             text : languageObject.languageName
         })
 
-    },[])
+    },[i18n,setLan])
     
     //for responsive
     const {showMenu} = useContext(ResponsiveContext)
