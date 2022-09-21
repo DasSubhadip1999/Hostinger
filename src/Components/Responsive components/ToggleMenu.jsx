@@ -2,7 +2,9 @@ import React, { useContext } from 'react'
 import ResponsiveContext from '../../Context/ResponsiveContext'
 
 function ToggleMenu() {
+  //from Responsive context file
   const {showMenuFn, showMenu} = useContext(ResponsiveContext);
+  
   return (
     <div className='toggle-menu'>
         <i className="fa-solid fa-cart-shopping"></i>

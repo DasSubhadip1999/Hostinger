@@ -19,13 +19,14 @@
     }
     .logo-lan-group h1 {
         font-size: 15px;
+        color: #002B5B;
     }
     .logo-lan-group img {
         width: 25px;
         height: 15px;
     }
     .logo-lan-group img+p {
-        display: none;
+        font-size: 12px;
     }
     .menubar-container {
         display: none;

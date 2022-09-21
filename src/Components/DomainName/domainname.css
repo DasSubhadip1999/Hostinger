@@ -1,5 +1,4 @@
 .domain-name {
-    /* border: 1px solid red; */
     background-color: #f4f5ff;
     padding: 2rem 0;
     margin: 3.5rem 0;
@@ -13,7 +12,6 @@
     width: 50%;
     text-align: center;
     margin: 0.6rem auto;
-    /* border: 1px solid red; */
     font-size: 15px;
     font-weight: 500;
     color: rgba(0,0,0,0.9);

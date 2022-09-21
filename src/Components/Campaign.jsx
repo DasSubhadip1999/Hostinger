@@ -3,15 +3,13 @@ import Button from './shared/Button'
 import TranslationContext from '../Context/TranslationContext';
 
 
-
-
 function Campaign() {
     //for translation
     const {cMH, cSH, cBT, cST, day, hour, minute, second, moneySign, perMonth, currency} = useContext(TranslationContext);
 
 
 
-
+    //countdown constants
     const [timerDays, setTimerDays] = useState("");
     const [timerHours, setTimerHours] = useState("");
     const [timerMinutes, setTimerMinutes] =useState("");
@@ -19,6 +17,7 @@ function Campaign() {
     let interval;
     const startTimer = () => {
       const targetDate = new Date("oct 2, 2022 24:00:00").getTime();
+      
       interval = setInterval( () => {
         const now = new Date().getTime();
         const diff = targetDate - now;

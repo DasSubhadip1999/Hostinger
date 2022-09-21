@@ -4,6 +4,7 @@ import Button from '../shared/Button'
 import './domainname.css'
 
 function DomainName() {
+  //from Context Provider
   const { findDomainName, domainSubText, domainInputPlaceholder, searchText} = useContext(TranslationContext);
   return (
     <div className='domain-name' id='domain-name'>

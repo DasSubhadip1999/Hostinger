@@ -1,20 +1,24 @@
-import React, { useContext, useEffect, useState } from 'react'
-import {v4 as uuidv4} from 'uuid';
-import {Link} from 'react-router-dom'
-import ResponsiveContext from '../Context/ResponsiveContext';
-import TranslationContext from '../Context/TranslationContext';
+//components
 import MenuItem from './MenuItem';
 import menuItemData from '../Data/menuItemData';
 import Campaign from './Campaign';
 import LanguageOption from './shared/LanguageOption';
+//contexts
+import ResponsiveContext from '../Context/ResponsiveContext';
+import TranslationContext from '../Context/TranslationContext';
+//react dependencies
+import React, { useContext, useEffect, useState } from 'react'
+import {v4 as uuidv4} from 'uuid';
+import {Link} from 'react-router-dom'
 // for responsive
 import ToggleMenu from './Responsive components/ToggleMenu';
 import ToggleMenuItem from './Responsive components/ToggleMenuItem';
 
 function Header() {
-    //for translation
-    const {t, login, cart, lan, islanClick, showLanOption, i18n, setLan } = useContext(TranslationContext)
-    //get language data from LS
+    //for translation from context
+    const {t, login, cart, lan, islanClick, showLanOption, i18n, setLan } = useContext(TranslationContext);
+
+    //get language data from Local storage on site load
     useEffect( () => {
         let languageObject = JSON.parse(localStorage.getItem("languagedetail")) || {
             language: "en", 
@@ -53,7 +57,7 @@ function Header() {
                     <img onClick={showLanOption} src={lan.img} alt=""/>
                     <p>{`${t(lan.text)}`}</p>
                     {
-                        islanClick && (
+                        islanClick && ( //language change option on click
                             <div className='lan-option'>
                                 <LanguageOption key={uuidv4()} imgLink="https://countryflagsapi.com/png/fr" text="French" lanCode="fr" />
                                 <LanguageOption key={uuidv4()} imgLink="https://countryflagsapi.com/png/in" text="English" lanCode="en" />
@@ -90,7 +94,7 @@ function Header() {
                 <div className='toggle-menu-container'>
                     {/* for mobile menubar starts */}
                     <ToggleMenuItem />
-                     {/* for mobile menubar ends */}   
+                    {/* for mobile menubar ends */}   
                 </div>
             )
         }

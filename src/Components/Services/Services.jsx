@@ -1,15 +1,24 @@
-import React, { useState, useContext } from 'react'
-import {v4 as uuidv4} from "uuid"
-import "./services.css";
+//components
 import ServiceDetailItem from './ServiceDetailItem';
 import Button from '../shared/Button';
+//data for mapping
 import serviceDetailData from '../../Data/serviceDetailData';
 import planFeatureData from '../../Data/planFeatureData';
-//translation
+//contexts
 import TranslationContext from '../../Context/TranslationContext';
+//react dependencies
+import React, { useState, useContext } from 'react'
+import {v4 as uuidv4} from "uuid"
+//css file
+import "./services.css";
+
+
 
 function Services() {
+  //for translation
   const { t, allInOne, allInOneSubText, bWH, moneySign, perMonth, currency, renew, selectText, sAF, seeLess} = useContext(TranslationContext);
+
+  //display more service section on click state
   const [isService, setIsService] = useState(false);
 
   return (
@@ -38,9 +47,7 @@ function Services() {
         <div className='service-detail' id='service-detail'>
           <div className='left'>
               {
-                serviceDetailData.left.map( (item) => {
-                  return <ServiceDetailItem data={item} key={uuidv4()} />
-                })
+                serviceDetailData.left.map( item => <ServiceDetailItem data={item} key={uuidv4()} /> )
               }
           </div>
           <div className='middle'>
@@ -54,9 +61,7 @@ function Services() {
           </div>
           <div className='right'>
               {
-                serviceDetailData.right.map( (item) => {
-                  return <ServiceDetailItem data={item} key={uuidv4()} />
-                })
+                serviceDetailData.right.map( item => <ServiceDetailItem data={item} key={uuidv4()} /> )
               }
           </div>
         </div>
@@ -67,23 +72,17 @@ function Services() {
             <div className='service-detail' id='service-detail-onclick'>
               <div className='left'>
                   {
-                    planFeatureData.left.map( (item) => {
-                      return <ServiceDetailItem key={uuidv4()} data={item} />
-                    })
+                    planFeatureData.left.map( item => <ServiceDetailItem key={uuidv4()} data={item} /> )
                   }
               </div>
               <div className='plan-middle middle'>
                   {
-                    planFeatureData.middle.map( (item) => {
-                      return <ServiceDetailItem key={uuidv4()} data={item} />
-                    })
+                    planFeatureData.middle.map( item =>  <ServiceDetailItem key={uuidv4()} data={item} /> )
                   }
               </div>
               <div className='right'>
                   {
-                    planFeatureData.right.map( (item) => {
-                      return <ServiceDetailItem key={uuidv4()} data={item} />
-                    })
+                    planFeatureData.right.map( item => <ServiceDetailItem key={uuidv4()} data={item} /> )
                   }
               </div>
             </div>
@@ -92,6 +91,7 @@ function Services() {
         <div className={isService ? 'features color' : 'features'} id='features'>
            <p 
             onClick={() => {setIsService( prev => !prev)}} >
+            {/*change text on condition */}
             {isService ? `${seeLess}` : `${sAF}` }
            </p>
         </div>

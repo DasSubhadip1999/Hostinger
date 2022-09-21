@@ -14,7 +14,7 @@ function ContactUs() {
             <input type="email" placeholder={t('Your email')} />
             <input type="text" placeholder={t('Subject')} />
             <textarea style={ {height : '6rem'}} type="text" placeholder={t('Your message')} />
-            <button>{t("Send")}</button>
+            <button disabled>{t("Send")}</button>
             </form>
         </div>
         <div className='about-hostinger'>

@@ -45,7 +45,7 @@ nav.active {
 }
 .logo-lan-group h1::first-letter {
   font-size: 26px;
-  color: #FFE9AE;
+  color: #400D51;
   font-weight: bold;
 }
 nav.active .logo-lan-group h1::first-letter {
@@ -57,9 +57,9 @@ nav.active .logo-lan-group h1 {
 .logo-lan-group h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
-  color: #EEE3CB;
+  color: #AF0171;
 }
 .logo-lan-group > div {
   display: flex;

@@ -3,6 +3,7 @@ import TranslationContext from '../../Context/TranslationContext'
 import './footer.css'
 
 function Footer() {
+   //for translation
    const { t } = useContext(TranslationContext);
   return (
     <footer>
